@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+  <meta name="title" content="Avalanch!!!" />
+  <meta name="description" content="New high score in avalanch!" />
+  <!-- <link rel="image_src" href="/resources/icon.png" /> -->
+  <script type="text/javascript" src="prototype-1.6.0.3.js"></script>
+  <script type="text/javascript" src="ResourceManager.js"></script>
+  <script type="text/javascript" src="Rectangle.js"></script>
+  <script type="text/javascript" src="GameObject.js"></script>
+  <script type="text/javascript" src="VisualGameObject.js"></script>
+  <script type="text/javascript" src="RepeatingGameObject.js"></script>
+  <script type="text/javascript" src="AnimatedGameObject.js"></script>
+  <script type="text/javascript" src="MainMenu.js"></script>
+  <script type="text/javascript" src="Player.js"></script>
+  <script type="text/javascript" src="LevelEndPost.js"></script>
+  <script type="text/javascript" src="Powerup.js"></script>
+  <script type="text/javascript" src="HazardGameObject.js"></script>
+  <script type="text/javascript" src="Level.js"></script>
+  <script type="text/javascript" src="Utils.js"></script>
+  <script type="text/javascript" src="ApplicationManager.js"></script>    
+  <script type="text/javascript" src="GameObjectManager.js"></script>
+  <script type="text/javascript" src="Main.js"></script>
+  <style type="text/css">
+    body { font-family: Arial,Helvetica,sans-serif;}
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="600" height="300">
+    <p>
+      Your browser does not support the canvas element.
+    </p>
+  </canvas>
+  <br />
+  <div style="float:left; display:inline; padding-right: 15px">
+    <div>Current Score </div>
+    <div id="Score">0</div>
+  </div>
+  <div style="float:left; display:inline">
+    <div >High Score </div>
+    <div id="HighScore">0</div>
+  </div>
+  <div style="float:right; display:inline">
+    <button type="button" onClick="mute()">Mute</button>
+  </div>
+
+
+  <script type="text/javascript">
+    function mute(){
+		var audio = document.getElementById('song');
+		if(audio.paused)
+			audio.play();
+		else
+			audio.pause();
+    }
+  </script>
+  
+  <audio id='song' loop autoplay>
+    <source src="resources/shortgametune.mp3">
+    You should be using chrome!
+  </audio>
+</body>
+</html>
