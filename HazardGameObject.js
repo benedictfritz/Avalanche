@@ -24,6 +24,7 @@ function HazardGameObject()
 
     if( this.collisionArea().intersects(g_player.collisionArea()))
     {	   
+      pausecomp(500);
       g_ApplicationManager.openMainMenu();
       this.shutdown();
     }
@@ -54,5 +55,14 @@ function HazardGameObject()
     this.shutdownGameObject();
   }
 }
+
+function pausecomp(millis) 
+{
+  var date = new Date();
+  var curDate = null;
+  
+  do { curDate = new Date(); } 
+  while(curDate-date < millis);
+} 
 
 HazardGameObject.prototype = new GameObject;

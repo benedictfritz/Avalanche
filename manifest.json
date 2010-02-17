@@ -1,6 +1,6 @@
 {
   "name": "Avalanche!!",
-  "version": "0.2",
+  "version": "0.3",
   "description": "Dodge the falling icicles! How long can you survive?",
   "icons": {
   	   "128": "resources/icon.png"
