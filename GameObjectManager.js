@@ -192,6 +192,9 @@ function GameObjectManager()
 
     this.keyDown = function(event)
     {
+	if(event.keyCode == 83)
+	    music();
+
         for (var x = 0; x < this.gameObjects.length; ++x)
         {
             if (this.gameObjects[x].keyDown)

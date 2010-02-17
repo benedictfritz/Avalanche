@@ -17,6 +17,7 @@
   <script type="text/javascript" src="Powerup.js"></script>
   <script type="text/javascript" src="HazardGameObject.js"></script>
   <script type="text/javascript" src="Level.js"></script>
+  <script type="text/javascript" src="Sound.js"></script>
   <script type="text/javascript" src="Utils.js"></script>
   <script type="text/javascript" src="ApplicationManager.js"></script>    
   <script type="text/javascript" src="GameObjectManager.js"></script>
@@ -41,21 +42,11 @@
     <div id="HighScore">0</div>
   </div>
   <div style="float:right; display:inline">
-    <button type="button" onClick="mute()">Mute</button>
+    <button type="button" onClick="music()">Music</button>
   </div>
 
-
-  <script type="text/javascript">
-    function mute(){
-		var audio = document.getElementById('song');
-		if(audio.paused)
-			audio.play();
-		else
-			audio.pause();
-    }
-  </script>
   
-  <audio id='song' loop autoplay>
+  <audio id='song' loop>
     <source src="resources/shortgametune.mp3">
     You should be using chrome!
   </audio>
