@@ -17,9 +17,10 @@ function Level()
   
   this.addHazard = function()
   {
-    new HazardGameObject().startupHazard(g_ResourceManager.gem,
-                                        Math.floor(Math.random()*550),
-                                        0 - Math.floor(Math.random() * 1200 ),
-                                        2);
+      this.numHazards++;
+      new HazardGameObject().startupHazard(g_ResourceManager.gem,
+					   Math.floor(Math.random()*550),
+					   0 - Math.floor(Math.random() * 1200 ),
+					   2);
   }
 }

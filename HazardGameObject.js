@@ -2,6 +2,7 @@ function HazardGameObject()
 {
   this.rampRate = 0;
   var fallSpeed = 300;
+  var MAX_DEATH = 35;
   this.image = null;
 
   this.collisionArea = function()
@@ -33,12 +34,13 @@ function HazardGameObject()
       this.x = Math.floor(Math.random()*550);
       g_score++;
       g_ApplicationManager.updateScore();
-      this.rampRate++;
-      if((this.rampRate % 2) == 0)
-        g_Level.addHazard();
+      if(g_Level.numHazards < MAX_DEATH){
+	  this.rampRate++;
+	  if((this.rampRate % 2 == 0))
+	      g_Level.addHazard();
+      }
     }
   }
-
   this.startupHazard = function(image, x, y, z)
   {
     this.startupGameObject(x, y, z);

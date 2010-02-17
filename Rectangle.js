@@ -16,7 +16,8 @@ function Rectangle()
 
   this.intersects = function(other)
   {
-    var give = 5;
+    var give = 8;
+    var top_give = 25;
 
     if (this.left + this.width < other.left + give)
       return false;
@@ -24,7 +25,7 @@ function Rectangle()
       return false;
     if (this.left > other.left + other.width - give)
       return false;
-    if (this.top > other.top + other.height - give)
+    if (this.top > other.top + other.height - top_give)
       return false;
 
     return true;
