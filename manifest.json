@@ -10,5 +10,6 @@
     "popup":"Game.html"
   },
   "permissions": [
+  "http://avalanchescores.appspot.com/"
   ]
 }

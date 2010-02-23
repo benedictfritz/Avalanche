@@ -18,12 +18,17 @@
   <script type="text/javascript" src="HazardGameObject.js"></script>
   <script type="text/javascript" src="Level.js"></script>
   <script type="text/javascript" src="Sound.js"></script>
+  <script type="text/javascript" src="Score.js"></script>
   <script type="text/javascript" src="Utils.js"></script>
   <script type="text/javascript" src="ApplicationManager.js"></script>    
   <script type="text/javascript" src="GameObjectManager.js"></script>
   <script type="text/javascript" src="Main.js"></script>
   <style type="text/css">
     body { font-family: Arial,Helvetica,sans-serif;}
+    a:link {color:#003399;}
+    a:visited {color:#003399;} 
+    a:hover {color:#000099;} 
+    a:active {color:#000033;}
   </style>
 </head>
 <body>
@@ -41,10 +46,16 @@
     <div >High Score </div>
     <div id="HighScore">0</div>
   </div>
+  
   <div style="float:right; display:inline">
+    Name:<input type="text" id="name">
+    <button type="button" onClick="submitScore()">Submit Score</button>
     <button type="button" onClick="music()">Music</button>
   </div>
-
+  
+  <div style="float:right">
+    <a href="http://avalanchescores.appspot.com/" target="_blank">Current High Scores</a>
+  </div>
   
   <audio id='song' loop>
     <source src="resources/shortgametune.mp3">
