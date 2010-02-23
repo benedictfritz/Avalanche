@@ -8,4 +8,5 @@ function submitScore() {
   req.open("POST", url, true);
   req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   req.send(parameters);
+  window.open("http://avalanchescores.appspot.com/","High scores!","");
 }
