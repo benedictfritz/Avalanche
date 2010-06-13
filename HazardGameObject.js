@@ -25,7 +25,7 @@ function HazardGameObject()
     if( this.collisionArea().intersects(g_player.collisionArea()))
     {	   
       pausecomp(500);
-      g_ApplicationManager.openMainMenu();
+      g_ApplicationManager.openDeath();
       this.shutdown();
     }
     

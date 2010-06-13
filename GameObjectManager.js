@@ -54,6 +54,7 @@ function GameObjectManager()
             {name: 'block', src: 'resources/BlockA0.png'},
             {name: 'gem', src: 'resources/Gem.png'},
             {name: 'mainmenu', src: 'resources/mainmenu.png'},
+			{name: 'death', src: 'resources/death.png'},
             {name: 'portal', src: 'resources/portal.png'}]);
 
         // use setInterval to call the draw function

@@ -35,6 +35,17 @@ function ApplicationManager()
         this.mainMenu = new MainMenu().startupMainMenu();
     }
 
+	this.openDeath = function()
+    {
+        g_GameObjectManager.shutdownAll();
+        g_GameObjectManager.xScroll = 0;
+        g_GameObjectManager.yScroll = 0;
+	if(g_highscore <= g_score)
+	    g_highscore = g_score;
+        g_score = 0;
+        this.death = new Death().startupDeath();
+    }
+	
     this.updateScore = function()
     {
         var score = document.getElementById("Score");
