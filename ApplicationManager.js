@@ -17,8 +17,8 @@ function ApplicationManager()
     this.startLevel = function()
     {
         g_GameObjectManager.shutdownAll();
-	this.level = new Level().startupLevel(this.canvasWidth, this.canvasHeight);
-	g_Level = this.level;
+		this.level = new Level().startupLevel(this.canvasWidth, this.canvasHeight);
+		g_Level = this.level;
         this.background = new RepeatingGameObject().startupRepeatingGameObject(g_ResourceManager.background0, 0, 0, 1, 600, 400-48-48, 0.25);
         g_player = new Player().startupPlayer(this.level);
         this.updateScore();
@@ -29,8 +29,8 @@ function ApplicationManager()
         g_GameObjectManager.shutdownAll();
         g_GameObjectManager.xScroll = 0;
         g_GameObjectManager.yScroll = 0;
-	if(g_highscore <= g_score)
-	    g_highscore = g_score;
+		if(g_highscore <= g_score)
+			g_highscore = g_score;
         g_score = 0;
         this.mainMenu = new MainMenu().startupMainMenu();
     }
@@ -40,8 +40,8 @@ function ApplicationManager()
         g_GameObjectManager.shutdownAll();
         g_GameObjectManager.xScroll = 0;
         g_GameObjectManager.yScroll = 0;
-	if(g_highscore <= g_score)
-	    g_highscore = g_score;
+		if(g_highscore <= g_score)
+			g_highscore = g_score;
         g_score = 0;
         this.death = new Death().startupDeath();
     }
