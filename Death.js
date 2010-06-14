@@ -8,7 +8,7 @@ function Death()
 
   this.keyDown = function(event)
   {
-    if (event.keyCode == 32)
+    if (event.keyCode == 13)
 		g_ApplicationManager.startLevel();
   }
 }
