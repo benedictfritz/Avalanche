@@ -77,6 +77,9 @@ function Player()
   {
     if (this.left && this.x >= 4)
       this.x -= this.speed * dt;
+	  
+	if(this.x < 0)
+		this.x = 0;
       
     if (this.right && (this.x + 48) < g_GameObjectManager.canvas.width)
       this.x += this.speed * dt;
