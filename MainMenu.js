@@ -8,7 +8,9 @@ function MainMenu()
 
   this.keyDown = function(event)
   {
-    g_ApplicationManager.startLevel();
+    if (event.keyCode == 13) {
+		g_ApplicationManager.startLevel();
+	}
   }
 }
 MainMenu.prototype = new VisualGameObject;
