@@ -10,7 +10,10 @@ function Death()
   this.keyDown = function(event)
   {
     if (event.keyCode == 13)
-		g_ApplicationManager.startLevel();
+    {
+      g_score = 0;
+      g_ApplicationManager.startLevel();
+    }
   }
 }
 Death.prototype = new VisualGameObject;
