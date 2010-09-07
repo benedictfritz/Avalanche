@@ -25,3 +25,15 @@ Array.prototype.removeObject = function(object)
     }
   }
 }
+
+function RoR(x, n)
+{
+  y = ((x >>> n) | (x << (32-n)));
+  return y;
+}
+
+function RoL(x,n)
+{
+  y = ((x << n) | (x >>> (32-n)));
+  return y;
+}

@@ -36,8 +36,8 @@ function HazardGameObject()
       g_score++;
       g_ApplicationManager.updateScore();
       if(g_Level.numHazards < MAX_DEATH){
-	  this.rampRate++;
-	  if((this.rampRate % 2 == 0))
+        this.rampRate++;
+        if((this.rampRate % 2 == 0))
 	      g_Level.addHazard();
       }
     }
