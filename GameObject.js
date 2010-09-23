@@ -1,3 +1,6 @@
+/**
+  Objects whos status will be maintained in the main loop
+*/
 function GameObject()
 {
   /* Display depth order. A smaller zOrder means the element is rendered first, and therefor */

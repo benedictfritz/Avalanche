@@ -1,3 +1,6 @@
+/**
+  Submits scores to the high score server
+*/
 function submitScore() {
   var highScore = document.getElementById("HighScore").innerHTML;
   var name = document.getElementById("name").value;

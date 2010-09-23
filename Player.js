@@ -1,3 +1,6 @@
+/**
+  AnimatedGameObject controled by the user
+*/
 function Player()
 {
   this.jumpHeight = 64;
@@ -75,15 +78,24 @@ function Player()
 
   this.update = function (dt, context)
   {
-    if (this.left && this.x >= 4)
+    screenRight = g_GameObjectManager.canvas.width;
+    //TODO fix this "magic number". Cause: differences in idle and run frame sizes
+    playerWidth = 40;
+    
+    // check collision with left border
+    if (this.left && this.x >= 0)
       this.x -= this.speed * dt;
-	  
-	if(this.x < 0)
-		this.x = 0;
-      
-    if (this.right && (this.x + 48) < g_GameObjectManager.canvas.width)
+
+    // check collision with right border
+    if (this.right && (this.x + playerWidth) < screenRight)
       this.x += this.speed * dt;
+    
+    // ensure player did not leap off screen
+    if (this.x < 0)
+      this.x = 0;
+    
+    if ((this.x + playerWidth) > screenRight)
+      this.x = screenRight - playerWidth;
   }
 }
-
 Player.prototype = new AnimatedGameObject;

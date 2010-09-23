@@ -1,3 +1,6 @@
+/**
+  VisualGameObject that "kills" the Player when collision is detected
+*/
 function HazardGameObject()
 {
   this.rampRate = 0;
@@ -35,13 +38,17 @@ function HazardGameObject()
       this.x = Math.floor(Math.random()*550);
       g_score++;
       g_ApplicationManager.updateScore();
+      
+      // up until MAX_DEATH number of hazards, add more hazards 
       if(g_Level.numHazards < MAX_DEATH){
         this.rampRate++;
-        if((this.rampRate % 2 == 0))
-	      g_Level.addHazard();
+        // add new hazards every other time 
+        if (this.rampRate % 2 == 0)
+          g_Level.addHazard();
       }
     }
   }
+  
   this.startupHazard = function(image, x, y, z)
   {
     this.startupGameObject(x, y, z);
@@ -55,14 +62,4 @@ function HazardGameObject()
     this.shutdownGameObject();
   }
 }
-
-function pausecomp(millis) 
-{
-  var date = new Date();
-  var curDate = null;
-  
-  do { curDate = new Date(); } 
-  while(curDate-date < millis);
-} 
-
-HazardGameObject.prototype = new GameObject;
+HazardGameObject.prototype = new VisualGameObject;

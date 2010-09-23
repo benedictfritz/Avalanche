@@ -1,3 +1,6 @@
+/**
+  Rectangle used to detect collision between Player and HazardGameObjects
+*/
 function Rectangle()
 {
   this.left = 0;
@@ -29,5 +32,5 @@ function Rectangle()
       return false;
 
     return true;
-}
+  }
 }

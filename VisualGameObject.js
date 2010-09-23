@@ -1,7 +1,10 @@
+/**
+  GameObject with a 2d sprite image
+*/
 function VisualGameObject()
 {
   this.image = null;
-  
+
   this.draw = function(dt, context, xScroll, yScroll)
   {
     context.drawImage(this.image, this.x - xScroll, this.y - yScroll);

@@ -1,3 +1,7 @@
+/** 
+  Various utility functions
+*/
+
 /**
     Removes a number of objects from the array
     @param from The first object to remove (int)
@@ -24,6 +28,19 @@ Array.prototype.removeObject = function(object)
       break;
     }
   }
+}
+
+/**
+  Halts the game engine
+  @param milllis Number of milliseconds to halt
+*/
+function pausecomp(millis) 
+{
+  var date = new Date();
+  var curDate = null;
+  
+  do { curDate = new Date(); } 
+  while(curDate-date < millis);
 }
 
 function RoR(x, n)

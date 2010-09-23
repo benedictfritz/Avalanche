@@ -1,3 +1,6 @@
+/**
+  Game over screen 
+*/
 function Death()
 {
   this.startupDeath = function()

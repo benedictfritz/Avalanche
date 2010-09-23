@@ -1,3 +1,6 @@
+/**
+  Opening screen displaying instructions
+*/
 function MainMenu()
 {
   this.startupMainMenu = function()

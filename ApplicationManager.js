@@ -31,6 +31,7 @@ function ApplicationManager()
     g_GameObjectManager.yScroll = 0;
     if(g_highscore <= g_score)
       g_highscore = g_score;
+    
     g_score = 0;
     this.mainMenu = new MainMenu().startupMainMenu();
   }
@@ -42,6 +43,7 @@ function ApplicationManager()
     g_GameObjectManager.yScroll = 0;
     if(g_highscore <= g_score)
       g_highscore = g_score;
+    
     this.death = new Death().startupDeath();
   }
 

@@ -1,3 +1,4 @@
+// Ideal render speed
 var FPS = 30;
 var SECONDS_BETWEEN_FRAMES = 1 / FPS;
 
