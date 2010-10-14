@@ -1,7 +1,3 @@
-/** 
-  Various utility functions
-*/
-
 /**
     Removes a number of objects from the array
     @param from The first object to remove (int)
@@ -30,19 +26,6 @@ Array.prototype.removeObject = function(object)
   }
 }
 
-/**
-  Halts the game engine
-  @param milllis Number of milliseconds to halt
-*/
-function pausecomp(millis) 
-{
-  var date = new Date();
-  var curDate = null;
-  
-  do { curDate = new Date(); } 
-  while(curDate-date < millis);
-}
-
 function RoR(x, n)
 {
   y = ((x >>> n) | (x << (32-n)));
@@ -53,4 +36,16 @@ function RoL(x,n)
 {
   y = ((x << n) | (x >>> (32-n)));
   return y;
+}
+
+function mangle()
+{
+  g_key = RoR(g_key, (g_score%7));
+  g_key = g_key ^ g_mask[g_score%5];
+}
+
+function initScore()
+{
+  g_score = 0;
+  g_key = 0x00C0FFEE;
 }

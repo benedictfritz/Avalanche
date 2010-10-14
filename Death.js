@@ -1,6 +1,3 @@
-/**
-  Game over screen 
-*/
 function Death()
 {
   this.startupDeath = function()
@@ -14,7 +11,7 @@ function Death()
   {
     if (event.keyCode == 13)
     {
-      g_score = 0;
+      initScore();
       g_ApplicationManager.startLevel();
     }
   }

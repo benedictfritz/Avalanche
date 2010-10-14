@@ -1,12 +1,9 @@
-/**
-  Submits scores to the high score server
-*/
 function submitScore() {
   var highScore = document.getElementById("HighScore").innerHTML;
   var name = document.getElementById("name").value;
   //var url = "http://localhost:8888/signscore";
   var url = "http://avalanchescores.appspot.com/signscore";
-  var parameters = "score=" + highScore + "&name=" + name;
+  var parameters = "score=" + highScore + "&name=" + name + "&key=" + g_key;
   var req = new XMLHttpRequest();
   req.open("POST", url, true);
   req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
