@@ -40,8 +40,10 @@ function ApplicationManager()
     g_GameObjectManager.shutdownAll();
     g_GameObjectManager.xScroll = 0;
     g_GameObjectManager.yScroll = 0;
-    if(g_highscore <= g_score)
-      g_highscore = g_score;
+    if(g_highscore <= g_score) {
+	g_highscore = g_score;
+	g_hsmangle = g_mangle;
+    }
     this.death = new Death().startupDeath();
   }
 
