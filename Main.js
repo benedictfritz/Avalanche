@@ -7,6 +7,7 @@ var g_ApplicationManager = null;
 var g_ResourceManager = null;
 var g_score = 0;
 var g_highscore = 0;
+var g_hsmangle = 0x0;
 var g_player = null;
 var g_key = 0;
 var g_mask = new Array( 

@@ -28,8 +28,10 @@ function LevelEndPost()
     if (this.collisionArea().intersects(g_player.collisionArea()))
     {
       g_ApplicationManager.openMainMenu();
-      if (g_highscore > g_score)
+      if (g_highscore > g_score) {
         g_highscore = g_score;
+	g_hsmangle = g_key;
+      }
       this.shutdown();            
     }
   }
