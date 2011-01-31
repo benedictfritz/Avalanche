@@ -42,7 +42,7 @@ function ApplicationManager()
     g_GameObjectManager.yScroll = 0;
     if(g_highscore <= g_score) {
 	g_highscore = g_score;
-	g_hsmangle = g_mangle;
+	g_hsmangle = g_key;
     }
     this.death = new Death().startupDeath();
   }
